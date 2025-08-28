@@ -30,7 +30,7 @@ const Partners = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            What Our Clients Say
+            What Our Clients say
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Hear from the clients and partners who trust us to bring their vision to life.
