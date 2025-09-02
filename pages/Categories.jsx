@@ -98,7 +98,7 @@ const Amazing = () => {
    
     const endpoint = isLogin
       ? ""
-      : "https://fourk-backend-i5ps.onrender.com/admin/signup";
+      : "https://fourk-new-backend.onrender.com/admin/signup";
 
     
     const response = await axios.post(endpoint, data);
@@ -139,7 +139,7 @@ const unlockDB = async () => {
       return;
     }
 
-    const res = await axios.put("https://fourk-backend-i5ps.onrender.com/admin/unlock", {
+    const res = await axios.put("https://fourk-new-backend.onrender.com/admin/unlock", {
       email,
       password,
     });
@@ -158,7 +158,7 @@ const unlockDB = async () => {
 
 
 useEffect(() => {
-    axios.get("https://fourk-backend-i5ps.onrender.com/admin/check")
+    axios.get("https://fourk-new-backend.onrender.com/admin/check")
       .then(res => {
         if (res.data.isLocked) {
           setIsLocked(true);
@@ -170,7 +170,7 @@ useEffect(() => {
 const navigate=useNavigate()
   const LoginAdmin=async(data)=>{
    
-    await axios.post("https://fourk-backend-i5ps.onrender.com/admin/login",data)
+    await axios.post("https://fourk-new-backend.onrender.com/admin/login",data)
 
     .then(()=>{
      toast.success("Login successfully !")
@@ -200,7 +200,7 @@ const navigate=useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/show/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/show/read");
         const shuffled = [...res.data].sort(() => 0.5 - Math.random());
         const selected = shuffled.slice(0, 5);
         setUserCard(selected);
@@ -214,7 +214,7 @@ const navigate=useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/product/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
         const shuffled = [...res.data].sort(() => 0.5 - Math.random());
         const selected = shuffled.slice(0, 4);
         setTrendsData(selected);
@@ -228,7 +228,7 @@ const navigate=useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/cat/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/cat/read");
         setCategories(res.data);
       } catch (err) {
         console.log(err);
@@ -285,7 +285,7 @@ const navigate=useNavigate()
         setLoading(true);
         setError(null);
 
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/product/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
         await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate network delay
 
         setAllProducts(res.data);
