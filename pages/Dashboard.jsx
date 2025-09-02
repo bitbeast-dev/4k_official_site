@@ -76,7 +76,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/product/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
         setProducts(res.data);
       } catch (err) {
         console.log(err);
@@ -94,7 +94,7 @@ export default function App() {
     }
 
     axios
-      .post("https://fourk-backend-i5ps.onrender.com/home/add", formData, {
+      .post("https://fourk-new-backend.onrender.com/home/add", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -114,14 +114,14 @@ export default function App() {
   const handleHomeUpdate = async (data) => {
     try {
       await axios.put(
-        `https://fourk-backend-i5ps.onrender.com/home/update/${selectedEntryHome.id}`,
+        `https://fourk-new-backend.onrender.com/home/update/${selectedEntryHome.id}`,
         data
       );
       alert("Entry updated successfully!");
       setUpdateForm(false);
 
       // Refresh data
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/home/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/home/read");
 
       setHomeData(res.data);
     } catch (err) {
@@ -133,14 +133,14 @@ export default function App() {
   const handleCategoryUpdate = async (data) => {
     try {
       await axios.put(
-        `https://fourk-backend-i5ps.onrender.com/cat/update/${selectedEntryHome.cat_id}`,
+        `https://fourk-new-backend.onrender.com/cat/update/${selectedEntryHome.cat_id}`,
         data
       );
       alert("Entry updated successfully!");
       setUpdateForm(false);
 
       // Refresh data
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/cat/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/cat/read");
       setCategories(res.data);
     } catch (err) {
       console.error("Update error:", err);
@@ -170,7 +170,7 @@ export default function App() {
 
     try {
       const res = await axios.post(
-        "https://fourk-backend-i5ps.onrender.com/product/add",
+        "https://fourk-new-backend.onrender.com/product/add",
         formData
       );
       toast.success("Data successfully inserted !");
@@ -186,7 +186,7 @@ export default function App() {
     reset();
     console.log(data);
     try {
-      const res = await axios.post("https://fourk-backend-i5ps.onrender.com/cat/add", data);
+      const res = await axios.post("https://fourk-new-backend.onrender.com/cat/add", data);
       toast.success("Data successfully inserted !");
       console.log("Data successfully inserted", res.data);
     } catch (err) {
@@ -196,7 +196,7 @@ export default function App() {
 
   const handleDeleteCategories = (cat_id) => {
     axios
-      .delete(`https://fourk-backend-i5ps.onrender.com/cat/delete/${cat_id}`)
+      .delete(`https://fourk-new-backend.onrender.com/cat/delete/${cat_id}`)
       .then((res) => {
         console.log(res.data);
         alert("Category successfully deleted !");
@@ -208,10 +208,10 @@ export default function App() {
 
   const handleDeleteProduct = async (ID) => {
     try {
-      await axios.delete(`https://fourk-backend-i5ps.onrender.com/product/delete/${ID}`);
+      await axios.delete(`https://fourk-new-backend.onrender.com/delete/${ID}`);
       alert(`Product with ID ${ID} successfully deleted !`);
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/product/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
       setProducts(res.data);
     } catch (err) {
       console.log(err);
@@ -220,7 +220,7 @@ export default function App() {
 
   const deleteTeam = async (id) => {
     try {
-      await axios.delete(`https://fourk-backend-i5ps.onrender.com/team/delete/${id}`);
+      await axios.delete(`https://fourk-new-backend.onrender.com/team/delete/${id}`);
       alert("Team successfully deleted");
     } catch (err) {
       console.log(err);
@@ -229,10 +229,10 @@ export default function App() {
 
   const deleteMission = async (id) => {
     try {
-      await axios.delete(`https://fourk-backend-i5ps.onrender.com/mission/delete/${id}`);
+      await axios.delete(`https://fourk-new-backend.onrender.com/mission/delete/${id}`);
       alert("Mission successfully deleted");
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/mission/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/mission/read");
       setMission(res.data);
     } catch (err) {
       console.log(err);
@@ -242,12 +242,12 @@ export default function App() {
   const handleProductUpdate = async (data) => {
     try {
       await axios.put(
-        `https://fourk-backend-i5ps.onrender.com/product/update/${selectedEntryHome.ID}`,
+        `https://fourk-new-backend.onrender.com/product/update/${selectedEntryHome.ID}`,
         data
       );
       alert("Data successfully Updated");
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/product/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
       setProducts(res.data);
     } catch (err) {
       console.log(err);
@@ -256,7 +256,7 @@ export default function App() {
 
   const deleteInternship = async (id) => {
     await axios
-      .delete(`https://fourk-backend-i5ps.onrender.com/internship/delete/${id}`)
+      .delete(`https://fourk-new-backend.onrender.com/internship/delete/${id}`)
       .then(() => {
         toast.success(`ID ${id} have deleted !`);
       })
@@ -271,7 +271,7 @@ export default function App() {
     }
     formData.append("description", data.description);
 
-    axios.post("https://fourk-backend-i5ps.onrender.com/values/add", formData);
+    axios.post("https://fourk-new-backend.onrender.com/values/add", formData);
     toast
       .success("Data successfully inserted !")
       .then((res) => {
@@ -291,7 +291,7 @@ export default function App() {
     formData.append("duration", data.duration);
 
     axios
-      .post("https://fourk-backend-i5ps.onrender.com/internship/add", formData)
+      .post("https://fourk-new-backend.onrender.com/internship/add", formData)
       .then((res) => {
         toast.success("Data successfully inserted !");
         console.log("Internship successfully added!", res.data);
@@ -304,7 +304,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/cat/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/cat/read");
         setCategories(res.data);
       } catch (err) {
         console.log(err);
@@ -316,7 +316,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/values/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/values/read");
         setCurrentValues(res.data);
       } catch (err) {
         console.log(err);
@@ -328,7 +328,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/mission/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/mission/read");
         setMission(res.data);
       } catch (err) {
         console.log(err);
@@ -340,7 +340,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/internship/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/internship/read");
         setInternship(res.data);
       } catch (err) {
         console.log(err);
@@ -402,7 +402,7 @@ export default function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/home/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/home/read");
         console.log("Fetched data:", res.data); // 👈 Check what's returned
         setHomeData(res.data);
         console.log(homeData.res.data.image);
@@ -420,7 +420,7 @@ export default function App() {
     if (!confirmDelete) return;
 
     axios
-      .delete(`https://fourk-backend-i5ps.onrender.com/home/delete/${id}`)
+      .delete(`https://fourk-new-backend.onrender.com/home/delete/${id}`)
 
       .then(() => {
         alert("Home Slide successfully deleted!");
@@ -442,7 +442,7 @@ export default function App() {
     }
 
     axios
-      .delete("https://fourk-backend-i5ps.onrender.com/home/truncate")
+      .delete("https://fourk-new-backend.onrender.com/home/truncate")
       .then(() => {
         toast.info("All data has been deleted");
       })
@@ -462,7 +462,7 @@ export default function App() {
     }
 
     axios
-      .delete("https://fourk-backend-i5ps.onrender.com/show/truncate")
+      .delete("https://fourk-new-backend.onrender.com/show/truncate")
       .then(() => {
         toast.success("All data has been deleted");
       })
@@ -480,7 +480,7 @@ export default function App() {
     formData.append("description", data.description);
 
     axios
-      .post("https://fourk-backend-i5ps.onrender.com/mission/add", formData)
+      .post("https://fourk-new-backend.onrender.com/mission/add", formData)
       .then((res) => {
         toast.success("Data successfully inserted !");
         console.log("Data successfully Inserted", res.data);
@@ -518,7 +518,7 @@ export default function App() {
     formData.append("description", data.description);
 
     axios
-      .post("https://fourk-backend-i5ps.onrender.com/show/add", formData)
+      .post("https://fourk-new-backend.onrender.com/show/add", formData)
       .then((res) => {
         toast.success("Data successfully inserted !");
         console.log("Showcase successfully inserted", res.data);
@@ -531,7 +531,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async (data) => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/show/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/show/read");
         setShowCaseData(res.data);
       } catch (err) {
         console.log(err);
@@ -542,10 +542,10 @@ export default function App() {
 
   const handleShowDelete = async (id) => {
     try {
-      await axios.delete(`https://fourk-backend-i5ps.onrender.com/show/delete/${id}`);
+      await axios.delete(`https://fourk-new-backend.onrender.com/show/delete/${id}`);
       alert(`Data with ${id} successfully deleted`);
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/show/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/show/read");
       setShowCaseData(res.data);
     } catch (err) {
       console.log(err);
@@ -555,12 +555,12 @@ export default function App() {
   const handleShowUpdate = async (data) => {
     try {
       await axios.put(
-        `https://fourk-backend-i5ps.onrender.com/show/update/${selectedEntryHome.id}`,
+        `https://fourk-new-backend.onrender.com/show/update/${selectedEntryHome.id}`,
         data
       );
       alert(`Customer Show with ID ${selectedEntryHome.id} updated`);
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/show/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/show/read");
       setShowCaseData(res.data);
     } catch (err) {
       console.log(err);
@@ -581,7 +581,7 @@ export default function App() {
     formData.append("role", data.role);
 
     axios
-      .post("https://fourk-backend-i5ps.onrender.com/team/add", formData, {
+      .post("https://fourk-new-backend.onrender.com/team/add", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -606,7 +606,7 @@ export default function App() {
     }
 
     axios
-      .delete("https://fourk-backend-i5ps.onrender.com/product/truncate")
+      .delete("https://fourk-new-backend.onrender.com/product/truncate")
       .then(() => {
         toast.success("All data has been deleted");
       })
@@ -620,7 +620,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/team/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/team/read");
         setTeam(res.data);
       } catch (err) {
         console.log(err);
@@ -633,9 +633,9 @@ export default function App() {
 
   const deleteValues = async (id) => {
     try {
-      axios.delete(`https://fourk-backend-i5ps.onrender.com/values/delete/${id}`);
+      axios.delete(`https://fourk-new-backend.onrender.com/values/delete/${id}`);
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/values/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/values/read");
       setCurrentValues(res.data);
     } catch (err) {
       console.log(err);
@@ -644,7 +644,7 @@ export default function App() {
   const handleTeamUpdate = async (data) => {
     try {
       await axios.put(
-        `https://fourk-backend-i5ps.onrender.com/team/update/${selectedEntryHome.id}`,
+        `https://fourk-new-backend.onrender.com/team/update/${selectedEntryHome.id}`,
         data
       );
       alert("Team successfully updated !");
@@ -665,7 +665,7 @@ export default function App() {
     formData.append("description", data.description);
 
     axios
-      .post("https://fourk-backend-i5ps.onrender.com/customer/add", formData, {
+      .post("https://fourk-new-backend.onrender.com/customer/add", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -686,7 +686,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/customer/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/customer/read");
         setCustomer(res.data);
       } catch (err) {
         console.log(err);
@@ -699,10 +699,10 @@ export default function App() {
 
   const handleDeleteCustomers = async (id) => {
     try {
-      await axios.delete(`https://fourk-backend-i5ps.onrender.com/customer/delete/${id}`);
+      await axios.delete(`https://fourk-new-backend.onrender.com/customer/delete/${id}`);
       alert("Data successfully deleted !");
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/customer/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/customer/read");
       setCustomer(res.data);
     } catch (err) {
       alert("Error occured");
@@ -715,12 +715,12 @@ export default function App() {
   const handleDescriptionUpdate = async (data) => {
     try {
       await axios.put(
-        `https://fourk-backend-i5ps.onrender.com/customer/update/${selectedEntryHome.id}`,
+        `https://fourk-new-backend.onrender.com/customer/update/${selectedEntryHome.id}`,
         data
       );
       alert("Customer Successfully Updated");
 
-      const res = await axios.get("https://fourk-backend-i5ps.onrender.com/customer/read");
+      const res = await axios.get("https://fourk-new-backend.onrender.com/customer/read");
       setCustomer(res.data);
     } catch (err) {
       alert("Error occured");
