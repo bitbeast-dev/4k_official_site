@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://fourk-new-backend.onrender.com/home/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/home/read");
         const shuffled = [...res.data].sort(() => 0.5 - Math.random());
         const selected = shuffled.slice(0, 3);
         setSlides(selected); // Use res.data, not just res
