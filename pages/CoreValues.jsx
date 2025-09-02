@@ -9,7 +9,7 @@ const CoreValues = () => {
   useEffect(()=>{
       const fetchData=async()=>{
         try{
-          const res=await axios.get("https://fourk-backend-i5ps.onrender.com/values/read")
+          const res=await axios.get("http://fourk-new-backend.onrender.com/values/read")
           console.log(res.data)
           const shuffled = [...res.data].sort(() => 0.5 - Math.random());
           const selected = shuffled.slice(0, 5);
