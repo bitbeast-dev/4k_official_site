@@ -9,7 +9,7 @@ const TeamMembers = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://fourk-backend-i5ps.onrender.com/team/read");
+        const res = await axios.get("http://fourk-new-backend.onrender.com/team/read");
 
         const shuffled = [...res.data].sort(() => 0.5 - Math.random());
         const selected = shuffled.slice(0, 4);
