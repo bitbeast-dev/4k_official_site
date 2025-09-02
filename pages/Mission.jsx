@@ -7,7 +7,7 @@ const Mission = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://fourk-new-backend.onrender.com/mission/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/mission/read");
         const shuffled = [...res.data].sort(() => 0.5 - Math.random());
         const selected = shuffled.slice(0, 5);
         setNewMission(selected);
