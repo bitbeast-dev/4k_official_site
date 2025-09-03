@@ -8,7 +8,7 @@ const Partners = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://fourk-new-backend.onrender.com/customer/read");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/customer/read");
 
         const shuffled = [...res.data].sort(() => 0.5 - Math.random());
         const selected = shuffled.slice(0, 4);
