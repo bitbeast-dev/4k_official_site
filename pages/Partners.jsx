@@ -49,7 +49,7 @@ const Partners = () => {
               >
                 {/* Image with conditional blur */}
                 <img
-                  src={partner.description}
+                  src={partner.image}
                   alt={partner.name}
                   className={`w-24 h-24 object-contain mb-4 transition-filter duration-300 ${
                     isVisible ? 'blur-sm' : ''
