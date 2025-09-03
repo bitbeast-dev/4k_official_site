@@ -1435,7 +1435,7 @@ const navigate=useNavigate()
               "All Products",
               "Internship",
               "Mission",
-              "Partners",
+              "Our Customers",
               "Values",
               "Contact",
               "Our Services",
@@ -1466,7 +1466,7 @@ const navigate=useNavigate()
                 "Our Services",
                 "Internship",
                 "Mission",
-                "Partners",
+                "Our Customers",
                 "Values",
                 "Contact"
               ].map((item) => (
