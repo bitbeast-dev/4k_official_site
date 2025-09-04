@@ -49,7 +49,7 @@ export default function App() {
   const [showValues, setShowValues] = useState(false);
   const [showInternship, setShowInternship] = useState(false);
   const [inputVisible, setInputVisible] = useState(false);
-  const [Bar, setProductBar] = useState(false);
+  const [productBar, setProductBar] = useState(false);
   const [showSection, setSectionForm] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [selectedEntry, setSelectedEntry] = useState(null);
