@@ -6,20 +6,39 @@ const TeamMembers = () => {
   const [expandedMember, setExpandedMember] = useState(null);
   const [teamMembers, setTeamMembers] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get("https://fourk-new-backend.onrender.com/team/read");
+ useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await axios.get("https://fourk-new-backend.onrender.com/team/read");
 
-        const shuffled = [...res.data].sort(() => 0.5 - Math.random());
-        const selected = shuffled.slice(0, 8);
-        setTeamMembers(selected);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+      // Separate fixed roles
+      const ceo = res.data.find(member => member.role.toLowerCase() === "ceo & founder");
+      const seniorDev = res.data.find(member => member.role.toLowerCase() === "senior full-stack developer");
+
+      // Filter out fixed roles from the rest
+      const others = res.data.filter(
+        member =>
+          member.role.toLowerCase() !== "ceo & founder" &&
+          member.role.toLowerCase() !== "senior full-stack developer"
+      );
+
+      // Shuffle the remaining team members
+      const shuffledOthers = [...others].sort(() => 0.5 - Math.random());
+
+      // Take the first 6 of the shuffled others (if you want max 8 total)
+      const selectedOthers = shuffledOthers.slice(0, 6);
+
+      // Combine fixed roles at the top
+      const finalTeam = [ceo, seniorDev, ...selectedOthers];
+
+      setTeamMembers(finalTeam);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  fetchData();
+}, []);
+
 
   const toggleExpanded = (memberId) => {
     setExpandedMember(expandedMember === memberId ? null : memberId);
