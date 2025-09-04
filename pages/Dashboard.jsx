@@ -76,7 +76,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("");
+        const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
         setProducts(res.data);
       } catch (err) {
         console.log(err);
