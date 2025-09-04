@@ -217,7 +217,7 @@ export default function App() {
       const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
       setProducts(res.data);
     } catch (err) {
-      toast.error(err);
+      toast.error(err.response?.data || err.message);
       console.log(err);
     }
   };
@@ -1543,7 +1543,7 @@ export default function App() {
                     <tbody className="divide-y divide-gray-700/50">
                       {products.map((entry) => (
                         <tr
-                          key={entry.ID}
+                          key={entry.id}
                           className="hover:bg-gray-700/50 transition-colors duration-200"
                         >
                           <td className="px-6 py-4 text-sm text-gray-100 w-50">
