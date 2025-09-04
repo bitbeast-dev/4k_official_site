@@ -209,10 +209,10 @@ export default function App() {
       });
   };
 
-  const handleDeleteProduct = async (ID) => {
+  const handleDeleteProduct = async (id) => {
     try {
-      await axios.delete(`https://fourk-new-backend.onrender.com/delete/${ID}`);
-      toast.success(`Product with ID ${ID} successfully deleted !`);
+      await axios.delete(`https://fourk-new-backend.onrender.com/delete/${id}`);
+      toast.success(`Product with ID ${id} successfully deleted !`);
 
       const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
       setProducts(res.data);
@@ -1578,7 +1578,7 @@ export default function App() {
                             </button>
                             <button
                               onClick={() => {
-                                handleDeleteProduct(entry.ID);
+                                handleDeleteProduct(entry.id);
                               }}
                               className="bg-red-800 ml-5  p-3 w-16 rounded-lg hover:cursor-pointer transition-colors"
                             >
