@@ -71,6 +71,7 @@ export default function App() {
   const [updateTeamForm, setUpdateTeamForm] = useState(false);
   const [addNewCustomer, setAddNewCustomer] = useState(false);
   const [customer, setCustomer] = useState([]);
+  const [productSection, setProductSection] = useState(false);
   const [updateCustomerForm, setUpdateCustomerForm] = useState(false);
 
   useEffect(() => {
