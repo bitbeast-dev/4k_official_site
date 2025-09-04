@@ -3001,58 +3001,7 @@ export default function App() {
       )}
 
       {/* Related Products Modal */}
-      {relatedProducts && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-gray-800 rounded-2xl p-6 w-full max-w-md shadow-2xl">
-            <h1 className="text-xl font-bold text-gray-100 mb-6 flex items-center">
-              <span className="mr-2">🔗</span>
-              Related Products
-            </h1>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Upload Image
-                </label>
-                <input
-                  type="file"
-                  className="w-full px-4 py-3 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-gray-700 text-gray-100"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Product Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter Product Name..."
-                  className="w-full px-4 py-3 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-gray-700 text-gray-100"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Product Price
-                </label>
-                <input
-                  type="number"
-                  placeholder="Enter Product Price..."
-                  className="w-full px-4 py-3 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-gray-700 text-gray-100"
-                />
-              </div>
-            </form>
-            <div className="flex space-x-3 mt-6">
-              <button
-                onClick={() => setRelatedProducts(false)}
-                className="flex-1 bg-gray-700 text-gray-300 py-3 rounded-xl hover:bg-gray-600 transition-colors font-medium"
-              >
-                Cancel
-              </button>
-              <button className="flex-1 bg- from-blue-600 to-purple-600 text-white py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all font-medium">
-                Save
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      
 
       {/* Delete Confirmation Modal */}
       {showDeleteModal && selectedEntry && (
