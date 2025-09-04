@@ -242,7 +242,7 @@ export default function App() {
   const handleProductUpdate = async (data) => {
     try {
       await axios.put(
-        `https://fourk-new-backend.onrender.com/product/update/${selectedEntryHome.ID}`,
+        `https://fourk-new-backend.onrender.com/product/update/${selectedEntryHome.id}`,
         data
       );
       alert("Data successfully Updated");
