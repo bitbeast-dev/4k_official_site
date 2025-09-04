@@ -42,14 +42,14 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("dashboard");
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [showHomeSection, setHomeSectionForm] = useState(false);
-  const [productSection, setProductSection] = useState(false);
-  const [relatedProducts, setRelatedProducts] = useState(false);
+  const [Section, setSection] = useState(false);
+  const [relateds, setRelateds] = useState(false);
   const [showcase, setShowCase] = useState(false);
   const [showMission, setShowMission] = useState(false);
   const [showValues, setShowValues] = useState(false);
   const [showInternship, setShowInternship] = useState(false);
   const [inputVisible, setInputVisible] = useState(false);
-  const [productBar, setProductBar] = useState(false);
+  const [Bar, setProductBar] = useState(false);
   const [showSection, setSectionForm] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [selectedEntry, setSelectedEntry] = useState(null);
@@ -211,7 +211,7 @@ export default function App() {
 
   const handleDeleteProduct = async (id) => {
     try {
-      await axios.delete(`https://fourk-new-backend.onrender.com/delete/${id}`);
+      await axios.delete(`https://fourk-new-backend.onrender.com/product/delete/${id}`);
       toast.success(`Product with ID ${id} successfully deleted !`);
 
       const res = await axios.get("https://fourk-new-backend.onrender.com/product/read");
