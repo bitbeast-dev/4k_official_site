@@ -82,8 +82,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <Linkedin size={20} />
-                <a href="#" className="underline">
-                  4K Vision
+                <a href="https://www.linkedin.com/company/4kvision/" className="underline">
+                  4KVision
                 </a>
               </li>
             </ul>
