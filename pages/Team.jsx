@@ -12,7 +12,7 @@ const TeamMembers = () => {
         const res = await axios.get("https://fourk-new-backend.onrender.com/team/read");
 
         const shuffled = [...res.data].sort(() => 0.5 - Math.random());
-        const selected = shuffled.slice(0, 4);
+        const selected = shuffled.slice(0, 8);
         setTeamMembers(selected);
       } catch (err) {
         console.log(err);
