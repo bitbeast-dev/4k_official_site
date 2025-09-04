@@ -1354,70 +1354,39 @@ const navigate=useNavigate()
                    
                   <li className="mt-5 flex">
                   <span><Dot/></span>
-                  FortiGate Firewalls & Licenses (deployment & renewal)</li>
+                  IT security and software solutions 
+                    {" "}
+                  </li>
                   <li className="mt-5 flex">
                     <span><Dot/></span>
-                    Microsoft Licensing (SQL Server, Office 365, enterprise
-                  productivity tools)</li>
+                     Network infrastructure & security systems 
+                    {" "}
+                  </li>
                   
                   <li className="mt-5 flex">
                      <span><Dot/></span>
-                    LAN Network Deployment (structured cabling, router/switch
-                    setup){" "}
+                    Customer software development 
+                    {" "}
                   </li>
                   <li className="mt-5 flex">
                      <span><Dot/></span>
-                    WLAN Network Deployment (wireless access points installation
-                    & configuration){" "}
+                  IT equipment & office supplies
+                 {" "}
                   </li>
                   <li className="mt-5 flex">
                      <span><Dot/></span>
-                    Video Surveillance Systems (HD IP & analog CCTV with remote
-                    monitoring){" "}
+                    Preventive & curative maintenance services {" "}
                   </li>
                   <li className="mt-5 flex">
                      <span><Dot/></span>
-                    Biometric Security Solutions (fingerprint, facial
-                    recognition, door access control){" "}
+                    Internship programs 
+                   {" "}
                   </li>
                   <li className="mt-5 flex">
                      <span><Dot/></span>
-                    Attendance Management Systems (digital tracking integrated
-                    with HR systems){" "}
+                     Help students study abroad{" "}
                   </li>
-                  <li className="mt-5 flex">
-                     <span><Dot/></span>
-                    Web Application Development (HR, finance, inventory,
-                    education systems){" "}
-                  </li>
-                  <li className="mt-5 flex">
-                     <span><Dot/></span>
-                    Mobile Application Development (Android & iOS apps) </li>
-                  <li className="mt-5 flex">
-                     <span><Dot/></span>
-                    System Integration (compatibility across new & legacy
-                    systems){" "}
-                  </li>
-                  <li className="mt-5 flex">
-                     <span><Dot/></span>
-                    IT Equipment Supply (laptops, desktops, printers, servers,
-                    UPS units, etc.){" "}
-                  </li>
-                  <li className="mt-5 flex">
-                     <span><Dot/></span>
-                    Office Supplies (printer paper, notebooks, pens, staplers,
-                    sticky notes, office furniture){" "}
-                  </li>
-                  <li className="mt-5 flex">
-                     <span><Dot/></span>
-                    Preventive IT Equipment Maintenance (diagnostics, updates,
-                    inspections, cleaning){" "}
-                  </li>
-                  <li className="mt-5 flex">
-                    <span><Dot/></span>
-                    Corrective IT Equipment Maintenance (emergency
-                    troubleshooting & component replacement){" "}
-                  </li>
+              
                 </ul>
                 <button className="border border-gray-100 p-3 bg-[#1e2939] mt-5 w-45 rounded-md ml-5 hover:cursor-pointer"
                 onClick={()=>{
