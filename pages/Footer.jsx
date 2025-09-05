@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <MapPin size={20} />
-                <span>KN 84 st Inkurunziza building<span>
+                <span>KN 84 st Inkurunziza building</span>
               </li>
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <Mail size={20} />
@@ -76,11 +76,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <Phone size={20} />
-                <a href="tel:+250 788 689 309 className="underline">
+                <a href="tel:+250788689309" className="underline">
                   +250 788 689 309
                 </a>
               </li>
-               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
+              <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <Instagram size={20} />
                 <a href="https://www.instagram.com/4k_vision2050/" className="underline">
                   4k_vision2050
