@@ -1,4 +1,4 @@
-import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -78,6 +78,12 @@ const Footer = () => {
                 <Phone size={20} />
                 <a href="tel:+250781823341" className="underline">
                   +250 781 823 341 / +250 788 689 309
+                </a>
+              </li>
+               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
+                <Instagram size={20} />
+                <a href="https://www.instagram.com/4k_vision2050/" className="underline">
+                  4k_vision2050
                 </a>
               </li>
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
