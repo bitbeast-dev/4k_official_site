@@ -10,9 +10,7 @@
             <div className="text-center">
               <h3 className="text-xl font-medium text-white mb-4">Phone</h3>
               <div className="space-y-2">
-                <a href="tel:+250781823341" className="block text-blue-400 hover:text-blue-300 underline text-lg transition-colors duration-300">
-                  +250 781 823 341
-                </a>
+              
                 <a href="tel:+250788689309" className="block text-blue-400 hover:text-blue-300 underline text-lg transition-colors duration-300">
                   +250 788 689 309
                 </a>
