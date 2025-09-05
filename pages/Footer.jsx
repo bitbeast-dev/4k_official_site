@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <MapPin size={20} />
-                <span>KN 84 st Inkurunziza buildingspan>
+                <span>KN 84 st Inkurunziza building<span>
               </li>
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <Mail size={20} />
