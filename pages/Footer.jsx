@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <MapPin size={20} />
-                <span>Kigali Rwanda (near Makuza Peace Plaza)</span>
+                <span>KN 84 st Inkurunziza buildingspan>
               </li>
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <Mail size={20} />
@@ -76,8 +76,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
                 <Phone size={20} />
-                <a href="tel:+250781823341" className="underline">
-                  +250 781 823 341 / +250 788 689 309
+                <a href="tel:+250 788 689 309 className="underline">
+                  +250 788 689 309
                 </a>
               </li>
                <li className="flex items-center space-x-3 hover:text-indigo-400 transition-colors duration-300 cursor-pointer">
