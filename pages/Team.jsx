@@ -76,9 +76,7 @@ const TeamMembers = () => {
                   {member.team_member}
                 </h3>
                 <p className="font-medium text-indigo-600">{member.role}</p>
-                <div className="text-gray-500 text-sm mb-4">
-                  5 years experience
-                </div>
+              
 
                 {/* Optional Social Links */}
               </div>
